@@ -1,0 +1,96 @@
+
+/* RESPONSIVE MEDIA QUERY MIXINS FOR SASS*/
+----------------------------------------------------
+
+// Extra Large Device
+=xl-d() 
+  @media only screen and (min-width: 1500px) 
+    @content
+  
+// Large Device
+=lg-d() 
+  @media only screen and (max-width: 1500px) 
+    @content
+  
+// Medium Device
+=md-d() 
+  @media only screen and (max-width: 1200px) 
+    @content
+  
+// Tab Device
+=tb-d() 
+  @media only screen and (max-width: 991px) 
+    @content
+  
+// Mobile Device
+=mo-d() 
+  @media only screen and (max-width: 767px) 
+    @content
+
+// Small Medium Device
+=sm-d() 
+  @media only screen and (max-width: 480px) 
+    @content
+
+
+///// APPLY SASS //////
+article
+    +xl-d
+        background: red
+ 
+
+
+ 
+  
+  /* RESPONSIVE MEDIA QUERY MIXINS FOR SCSS*/
+----------------------------------------------------
+
+// Extra Large Device
+@mixin xl-d() {
+    @media only screen and (min-width: 1500px) {
+        @content
+    }
+}
+
+// Large Device
+@mixin lg-d() {
+    @media only screen and (max-width: 1500px) {
+        @content
+    }
+}
+
+// Medium Device
+@mixin md-d() {
+    @media only screen and (max-width: 1200px) {
+        @content
+    }
+}
+  
+// Tab Device
+@mixin tb-d() {
+    @media only screen and (max-width: 991px) {
+        @content
+    }
+}
+  
+// Mobile Device
+@mixin mo-d() {
+    @media only screen and (max-width: 767px) {
+        @content
+    }
+}
+
+// Small Medium Device
+@mixin sm-d() {
+    @media only screen and (max-width: 480px) {
+        @content
+    }
+}
+
+
+///// APPLY SASS //////
+article {
+    @include xl-d {
+        background: red;
+    }
+}
